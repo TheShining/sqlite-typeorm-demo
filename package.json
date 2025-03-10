@@ -1,0 +1,15 @@
+{
+  "name": "sqlite-typeorm-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liang",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "typeorm": "^0.3.21"
+  }
+}
