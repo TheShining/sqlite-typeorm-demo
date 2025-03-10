@@ -1,4 +1,5 @@
 const { DataSource } = require('typeorm');
+const logger = require('./logger');
 const User = require('./entity/User');
 
 const AppDataSource = new DataSource({
@@ -24,22 +25,22 @@ async function main() {
         grade: 90,
     });
     await userRepository.save(user);
-    console.log('User has been saved:', user);
+    logger.info('User has been saved: %o', user);
 
     // Read users
     const users = await userRepository.find();
-    console.log('All users:', users);
+    logger.info('All users: %o', users);
 
     // Update a user
     user.age = 31;
     await userRepository.save(user);
-    console.log('User has been updated:', user);
+    logger.info('User has been updated: %o', user);
 
     // Delete a user
     await userRepository.remove(user);
-    console.log('User has been removed:', user);
+    logger.info('User has been removed: %o', user);
 
     await AppDataSource.destroy();
 }
 
-main().catch((error) => console.log(error));
+main().catch((error) => logger.error(error));

@@ -1,0 +1,4 @@
+{"level":"info","message":"User has been saved: {\n  name: 'John Doe',\n  age: 30,\n  hobbies: 'Reading, Traveling',\n  grade: 90,\n  id: 2\n}","service":"user-service","timestamp":"2025-03-10 22:11:16"}
+{"level":"info","message":"All users: [\n  {\n    id: 2,\n    name: 'John Doe',\n    age: 30,\n    hobbies: 'Reading, Traveling',\n    grade: 90\n  },\n  [length]: 1\n]","service":"user-service","timestamp":"2025-03-10 22:11:16"}
+{"level":"info","message":"User has been updated: {\n  name: 'John Doe',\n  age: 31,\n  hobbies: 'Reading, Traveling',\n  grade: 90,\n  id: 2\n}","service":"user-service","timestamp":"2025-03-10 22:11:16"}
+{"level":"info","message":"User has been removed: {\n  name: 'John Doe',\n  age: 31,\n  hobbies: 'Reading, Traveling',\n  grade: 90,\n  id: undefined\n}","service":"user-service","timestamp":"2025-03-10 22:11:16"}

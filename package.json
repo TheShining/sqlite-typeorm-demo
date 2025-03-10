@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "better-sqlite3": "^11.8.1",
-    "typeorm": "^0.3.21"
+    "typeorm": "^0.3.21",
+    "winston": "^3.17.0"
   }
 }
