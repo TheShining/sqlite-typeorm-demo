@@ -37,8 +37,37 @@ async function main() {
     logger.info('User has been updated: %o', user);
 
     // Delete a user
-    await userRepository.remove(user);
-    logger.info('User has been removed: %o', user);
+    // await userRepository.remove(user);
+    // logger.info('User has been removed: %o', user);
+
+    // findOne
+    // const findUser = await userRepository.findOneBy({ age: 31 });
+    const findUser = await userRepository.findOne({
+        select: {
+            name: true,
+        },
+        where: { id: 4 },
+    });
+
+    console.log('findOne', findUser);
+
+    // find
+    const userList = await userRepository.find({
+        select: {
+            name: true,
+            id: true,
+        },
+        where: { age: 31 },
+        order: {
+            name: 'ASC',
+            id: 'DESC',
+        },
+        skip: 0,
+        take: 3,
+        cache: true,
+    });
+
+    console.log('userList-----------', userList);
 
     await AppDataSource.destroy();
 }
