@@ -57,7 +57,7 @@ async function main() {
             name: true,
             id: true,
         },
-        where: { age: 31 },
+        where: { age: 32 },
         order: {
             name: 'ASC',
             id: 'DESC',
